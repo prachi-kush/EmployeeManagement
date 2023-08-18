@@ -1,0 +1,61 @@
+
+/* Add this CSS in your Header.css file */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* Adjust this value to position the dropdown above the header */
+  left: 0;
+  background-image: linear-gradient(rgb(92, 58, 58),rgb(230, 84, 22));
+
+  box-shadow: 0px 8px 16px 0px rgba(63, 61, 61, 0.2);
+  z-index: 1;
+  min-width: 160px;
+  padding: 12px;
+  display: none;
+}
+
+.nav-item.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar {
+  height:500%;
+    /* background-color: black; */
+    background-color: rgb(95, 28, 28); /* For browsers that do not support gradients */
+    background-image: linear-gradient(rgb(92, 58, 58),rgb(230, 84, 22));
+  }
+  
+  .navbar-brand {
+    color: rgb(16, 16, 16);
+  }
+  
+  .navbar-nav .nav-link {
+    color: rgb(12, 12, 12);
+  }
+  
+  .user-panel {
+    display: flex;
+    align-items: center;
+  }
+  
+  .admin-panel-button,
+  .user-panel-button {
+    align-self: flex-end;
+    margin-left: 100px;
+    padding: 8px 12px;
+    background-color: goldenrod;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .admin-panel-button:hover,
+  .user-panel-button:hover {
+    background-color: darkgoldenrod;
+  }
+  .nav-item.active .nav-link {
+    color: #ffffff; /* Change the color to the active tab color */
+    font-weight: bold; /* Optionally add bold font for the active tab */
+  }
+
+  
+  

@@ -1,0 +1,130 @@
+/* Leave.css */
+
+/* Container styles */
+.divColor {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+  }
+  
+  /* Form styles */
+  .leaveform {
+    width: 400px; /* Set the form width to 400px */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form content vertically */
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  select,
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Set the width of input elements to 100% of the form */
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #040303;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #64a0e0;
+  }
+  
+
+/* calender css-======================================== */
+
+.calendar-container {
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(95, 28, 28); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));
+}
+
+.react-calendar__navigation {
+  margin-bottom: 0px !important;
+  padding-bottom: 1em;
+  /* background: red; */
+}
+
+.react-calendar__navigation button{
+  /* background: rgb(95, 28, 28); */
+  /* background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22)); */
+
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 300px;
+  background-color: black; /* Set to transparent to show the content */
+  border: 1px solid #4b1212;
+  border-radius: 4px;
+}
+
+.react-calendar__tile--now {
+  background: #007bff;
+  /* Update to use the same gradient as the container */
+  background-color: rgb(95, 28, 28);
+  background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));
+}
+
+.react-calendar__tile--active {
+  /* Update to use the same gradient as the container */
+  background-color: rgb(95, 28, 28);
+  background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));
+}
+
+.react-calendar__viewContainer {
+  background: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));
+}
+
+
+
+/* Highlight the current month */
+.react-calendar__month-view__days__day--weekend {
+  /* Update to use the same gradient as the container */
+  background: rgb(95, 28, 28);
+  background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));
+}
+
+/* Style the previous and next month days */
+.react-calendar__tile--view-previous,
+.react-calendar__tile--view-next {
+  /* Update to use the same gradient as the container */
+  background-color: rgb(95, 28, 28);
+  background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));
+}
+
+/* Hide the next month days of the previous month view */
+.react-calendar__tile--view-previous.react-calendar__tile--hasActive {
+  background: rgb(141, 42, 42);
+}
+
+/* Hide the previous month days of the next month view */
+.react-calendar__tile--view-next.react-calendar__tile--hasActive {
+  background: rgb(12, 12, 12);
+}
+.react-calendar__month-view__days__day--weekend {
+  color: #ddbebe;
+}

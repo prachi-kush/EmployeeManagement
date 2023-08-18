@@ -1,0 +1,50 @@
+.upcoming-birthday-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .birthday-table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  th,
+  td {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: rgb(95, 28, 28); /* For browsers that do not support gradients */
+    background-image: linear-gradient(rgb(92, 58, 58),rgb(230, 84, 22));
+  }
+  
+  tr:hover {
+    background-color: #d2a8a8;
+    cursor: pointer;
+  }
+  
+  .no-birthdays-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .birthday-table {
+      font-size: 14px;
+    }
+  }
+  

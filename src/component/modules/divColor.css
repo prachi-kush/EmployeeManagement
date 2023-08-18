@@ -1,0 +1,38 @@
+.divColor{
+    background-color: rgb(95, 28, 28); /* For browsers that do not support gradients */
+    background-image: linear-gradient(rgb(92, 58, 58),rgb(230, 84, 22));
+    /* margin:2% */
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+  
+  .modal {
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* styles.css or create a new CSS file */
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Adjust the z-index to make sure the blurred background appears above other elements */
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and transparency as needed */
+  }
+  
