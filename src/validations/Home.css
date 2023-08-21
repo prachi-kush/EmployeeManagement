@@ -1,0 +1,47 @@
+/* Home.css */
+
+.home-container {
+  background-color: #f2f2f2; /* Add your desired background color */
+  padding: 20px; /* Add some padding to the container */
+}
+
+.employee-card {
+  align-items: center;
+  background-color: #ffffff; /* Set the background color for the cards */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 300px; /* Adjust the width as per your preference */
+}
+
+.avatar-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card1 {
+  background-color: #e269a5; /* Add a background color for the first card */
+}
+
+.card2 {
+  background-color: #69ca5d; /* Add a background color for the second card */
+}
+.card3 {
+  background-color: #75ddc5; /* Add a background color for the first card */
+}
+
+.card4 {
+  background-color: #bb94c5; /* Add a background color for the second card */
+}
+
+.card5 {
+  background-color: #f09478; /* Add a background color for the first card */
+}
+
+.card6 {
+  background-color: #b98996; /* Add a background color for the second card */
+}
+

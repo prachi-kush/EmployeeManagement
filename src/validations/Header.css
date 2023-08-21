@@ -1,0 +1,95 @@
+
+/* Add this CSS in your Header.css file */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* Adjust this value to position the dropdown above the header */
+  left: 0;
+  background-image: linear-gradient(rgb(92, 58, 58),rgb(230, 84, 22));
+
+  box-shadow: 0px 8px 16px 0px rgba(63, 61, 61, 0.2);
+  z-index: 1;
+  min-width: 160px;
+  padding: 12px;
+  display: none;
+}
+
+.nav-item.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar {
+  position: fixed; /* Add this line to keep the header fixed at the top */
+  top: 0; /* Adjust this value if you want to add some space from the top */
+  width: 100%; /* Make the header span the entire width of the viewport */
+  height: 50px; /* Set the desired height of the header */
+  background-color: rgb(95, 28, 28);
+  background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));
+}
+  
+  .navbar-brand {
+    color: rgb(16, 16, 16);
+  }
+  
+  .navbar-nav .nav-link {
+    color: rgb(12, 12, 12);
+  }
+  
+  .user-panel {
+    display: flex;
+    align-items: center;
+  }
+  
+  .admin-panel-button,
+  .user-panel-button {
+    align-self: flex-end;
+    margin-left: 100px;
+    padding: 8px 12px;
+    background-color: goldenrod;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .admin-panel-button:hover,
+  .user-panel-button:hover {
+    background-color: darkgoldenrod;
+  }
+/* Styles for larger screens */
+@media screen and (min-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .user-panel {
+    display: flex;
+    align-items: center;
+  }
+
+  .admin-panel-button,
+  .user-panel-button {
+    margin-left: 20px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Styles for smaller screens */
+@media screen and (max-width: 767px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  .user-panel {
+    display: none;
+  }
+}
+  
+  

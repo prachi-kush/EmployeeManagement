@@ -1,0 +1,14 @@
+.imagehome{
+    /* border: 1px solid black; */
+    background: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Fbusiness-characters-team-work-office-people-corporate-employee-cartoon-teamwork-communication-business-team-illustration_176516-369.jpg%3Fw%3D2000&tbnid=E4u8aXsI3CQJzM&vet=12ahUKEwiG-Ibw9KmAAxXcmWMGHS1lBKQQMygDegUIARCsAQ..i&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Fbusiness-characters-team-work-office-people-corporate-employee-cartoon-teamwork-communication-business-team-illustration_10237977.htm&docid=uAIvERTBtdo3CM&w=2000&h=2000&q=employee%20cartoon%20images&client=ubuntu-chr&ved=2ahUKEwiG-Ibw9KmAAxXcmWMGHS1lBKQQMygDegUIARCsAQ');
+    background-repeat: no-repeat;
+    padding: 15px;
+    height: 400%;
+    background-size:  cover;
+  }
+
+
+.textColor{
+   color: rgb(95, 28, 28); /* For browsers that do not support gradients */
+  /* background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));  */
+}

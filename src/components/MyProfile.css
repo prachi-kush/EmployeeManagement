@@ -1,0 +1,74 @@
+.registration-form {
+    font-family: Calibri, Helvetica, sans-serif;
+    background-color: rgb(95, 28, 28); /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(92, 58, 58), rgb(230, 84, 22));
+    padding: 20px;
+    align-self: center;
+  }
+  
+  .registration-form h1 {
+    text-align: center;
+  }
+  
+  .registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+  }
+  .skillsText{
+    margin-top: 5px;
+  }
+  .registration-form input[type='text'],
+  .registration-form select,
+  .registration-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .phoneNumber {
+    width: 90% !important;
+    
+  }
+  .countryCode {
+    width: 10% !important;
+  }
+  
+  .registration-form textarea {
+    resize: vertical;
+  }
+  
+  .registration-form .radio-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .registration-form .phone-input {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .registration-form button {
+    background-color:rgb(92, 58, 58);
+    color: white;
+    padding: 14px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    /* opacity: 0.9; */
+    font-size: 18px;
+   
+  }
+  
+  .registration-form button:hover {
+    opacity: 1;
+  }
+
+ 

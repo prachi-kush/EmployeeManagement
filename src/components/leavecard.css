@@ -1,0 +1,96 @@
+/* LeaveApplicationCard.css */
+.leave-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+  }
+  
+  .user-details {
+    margin-bottom: 16px;
+  }
+  
+  .user-info {
+    flex: 1;
+  }
+  
+  .user-image {
+    flex: 0 0 80px;
+  }
+  
+  .leave-details {
+    margin-top: 16px;
+  }
+  
+  .leave-details h4 {
+    margin-bottom: 8px;
+  }
+  
+  .leave-details p {
+    margin-bottom: 4px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn-danger:hover {
+    background-color: #b02a37;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn-success:hover {
+    background-color: #1e7e34;
+  }
+  
+  .btn-primary[disabled],
+  .btn-danger[disabled],
+  .btn-success[disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
+  .sidebar {
+    width: 20%;
+    padding: 16px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 16px;
+  }
+  
+  .sidebar button {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  
+  .sidebar button:last-child {
+    margin-bottom: 0;
+  }
+  
+  .main-content {
+    width: 80%;
+  }
+  

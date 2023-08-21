@@ -1,0 +1,53 @@
+/* Add your CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #510606;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #95a4e6;
+}
+
+.form-container label {
+  margin-right: 10px;
+}
+
+.form-container select {
+  border: #2980b9;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  /* Set a fixed width or percentage width to adjust the size */
+  width: 200px; /* Change this value to adjust the width */
+  /* Allow the select element to take up the available space */
+  flex-grow: 1;
+}
+
+.form-container button {
+  border: none;
+  outline: none;
+  background-color: #3498db;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #2980b9;
+}
+
+/* Add more styles as needed */
