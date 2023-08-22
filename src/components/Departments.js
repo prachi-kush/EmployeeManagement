@@ -12,18 +12,18 @@ const Departments = () => {
   return (
     <>
     <div style={{marginLeft:'20%'}}>
-      <h1>All Department Details</h1>
+      <h1>All Department & Employee Details</h1>
       <h4 className='mx-5'>Search Here</h4>
       <div className='d-flex flex-row mx-5'>
 <button 
 onClick={()=>{setIsOpen(2)}}
 className='btn btn-sm btn-primary'
->By Name</button>
+>search by Name</button>
 <button
 onClick={()=>{setIsOpen(1)}}
 className='btn btn-sm btn-primary'
 
->By Department</button>
+>search by Department</button>
 
       </div>
    {isOpen===2 && <Search/>}

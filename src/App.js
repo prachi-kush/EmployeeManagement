@@ -17,6 +17,9 @@ import Feedback from './components/Feedback';
 import Birthday from './components/Birthday';
 import AddEmployee from './components/AddEmployee';
 import Index from '../src/validations/Index';
+import VideoHome from '../src/components/videocall/VideoHome';
+import VideoRoom from '../src/components/videocall/VideoRoom'
+
 import PrivateComponent from './validations/PrivateComponent';
 import PrivatePageWrapper from './validations/PrivatePageWrapper';
 function App() {
@@ -54,6 +57,8 @@ function App() {
             <Route path="admin/feedback" element={<Feedback />} />
             <Route path="admin/birthday" element={<Birthday />} />
             <Route path="admin/addemployee" element={<AddEmployee />} />
+            <Route path='/videoHome' element={<VideoHome/>}/>
+           <Route path='/videoRoom/:roomId' element={<VideoRoom/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

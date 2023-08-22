@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 import './searchUser.css'
 import nodata from '../images/nodata.jpg'
 
@@ -88,6 +89,15 @@ const SearchDepartment = () => {
       <p  className='mx-3'><strong>Education:</strong> {user.education}</p>
 
       <p  className='mx-3 '><strong>Skills:</strong> {user.skills}</p>
+      </div>
+      <div className='d-flex flex-row align-items-center'>
+        <button
+          className="btn btn-primary"
+          // onClick={handleVideoChat}
+        >
+          <Link to ='/videoHome' className='text-dark'> Video Chat</Link>
+         
+        </button>
       </div>
             </div>
           ))
