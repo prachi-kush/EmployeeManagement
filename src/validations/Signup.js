@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validations/AxiosInstance'
+
 import { Link, useNavigate } from 'react-router-dom';
 import './SignupForm.css';
 
@@ -35,7 +37,7 @@ const Signup = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const result = await axios.post('http://localhost:6700/admin/signup', data);
+        const result = await axios.post('/admin/signup', data);
         console.log('result', result.data);
          navigate('/admin/login');
       } catch (err) {

@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:6700', // Your API base URL
+  // baseURL: 'http://localhost:6700', // Your API base URL
+  baseURL:'https://emp3-3e2i.onrender.com'
+
 });
 
 instance.interceptors.request.use(

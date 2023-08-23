@@ -15,6 +15,7 @@ const Sidebar = () => {
       <Link to="/admin/shift" className={location.pathname === '/admin/shift' ? 'active' : ''}>Employee's Shift</Link>
       <Link to="/admin/feedback" className={location.pathname === '/admin/feedback' ? 'active' : ''}>Employee's Feedback</Link>
       <Link to="/admin/birthday" className={location.pathname === '/admin/birthday' ? 'active' : ''}>Employee's Birthday</Link>
+      <Link to="/videoHome" className={location.pathname === '/videoHome'  ? 'active' : ''}>Create Video Chat</Link>
 
     </div>
   );

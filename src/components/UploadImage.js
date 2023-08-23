@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './MyProfile.css'; // Import your custom CSS file
 import dummyUser from '../images/dummyUser.png';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validations/AxiosInstance'
+
 
 const UploadImage = () => {
     
@@ -21,7 +23,7 @@ const UploadImage = () => {
     const getData = async () => {
         const email = JSON.parse(localStorage.getItem("admin"));
        try {
-            const response = await axios.get(`http://localhost:6700/user/getuser/${email}`);
+            const response = await axios.get(`/user/getuser/${email}`);
             setFormData(response.data[0]);
             console.log("formData", formData)
         } catch (err) {

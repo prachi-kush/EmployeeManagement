@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validations/AxiosInstance'
+
 import './searchUser.css'
 import nodata from '../images/nodata.jpg'
 
@@ -16,7 +18,7 @@ const Search = () => {
       setSearchResults([]); // Clear the search results if the input is empty
     } else {
       try {
-        const response = await axios.get(`http://localhost:6700/user/getUser/${value}`);
+        const response = await axios.get(`/user/getUser/${value}`);
         setSearchResults(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);

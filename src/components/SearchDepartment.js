@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validations/AxiosInstance'
 import {Link} from 'react-router-dom'
 import './searchUser.css'
 import nodata from '../images/nodata.jpg'
@@ -18,7 +19,7 @@ const SearchDepartment = () => {
       setSearchResults([]); // Clear the search results if the input is empty
     } else {
       try {
-        const response = await axios.get(`http://localhost:6700/user/searchUser/${value}`);
+        const response = await axios.get(`/user/searchUser/${value}`);
         console.log("response", response);
         setSearchResults(response.data);
       } catch (error) {

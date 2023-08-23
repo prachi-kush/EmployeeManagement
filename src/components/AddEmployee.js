@@ -63,6 +63,17 @@ const AddEmployee = () => {
           } else {
             validationErrors[name] = '';
           }
+        }  else if (name === 'dob') {
+          const dob = new Date(value);
+          const currentDate = new Date();
+          const ageInMilliseconds = currentDate - dob;
+          const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365);
+    
+          if (ageInYears < 18) {
+            validationErrors[name] = 'Employee must be at least 18 years old';
+          } else {
+            validationErrors[name] = '';
+          }
         } else if (name === 'password') {
           
         }
@@ -218,7 +229,7 @@ const AddEmployee = () => {
                             value={formData.dob}
                             onChange={handleInputChange}
                         />
-                      
+                       {errors.dob && <p className="text-warning">{errors.dob}</p>}
                         <label>Current Address:</label>
                         <textarea
                             rows="4"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validations/AxiosInstance'
 import './LoginForm.css';
 import { toast } from 'react-toastify';
 
@@ -32,7 +33,7 @@ const Login = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const result = await axios.post('http://localhost:6700/admin/login', data);
+        const result = await axios.post('/admin/login', data);
         console.log('result: ', result);
         localStorage.setItem('admin', JSON.stringify(result.data));
         localStorage.setItem('token', JSON.stringify(result.data.token));

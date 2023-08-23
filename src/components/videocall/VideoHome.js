@@ -1,43 +1,31 @@
 import React, { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axiosInstance from '../../validations/AxiosInstance'
-// import './Home.css'; 
+import axiosInstance from '../../validations/AxiosInstance';
+import './videoHome.css'; // Import your CSS file here if needed
 
 const Home = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState('');
 
-//   const handleJoinRoom = useCallback(() => {
-//     navigate(`/videoRoom/${value}`);
-//   }, [navigate, value]);
-
-const handleJoinRoom = useCallback(async () => {
-    try {
-      const response = await axiosInstance.post('/videoCall/join', { roomId: value });
-    if (response.status === 200) {
-        navigate(`/videoRoom/${value}`);
-      } else {
-        console.error('Failed to join video call:', response.statusText);
-      }
-    } catch (error) {
-      // Handle network errors or other exceptions
-      console.error('Error joining video call:', error);
-    }
+  const handleJoinRoom = useCallback(() => {
+    navigate(`/videoRoom/${value}`);
   }, [navigate, value]);
 
   return (
-    <div className="container m-5 " style={{width:'50%', margin:'10%',alignSelf:'center' ,backgroundColor:'red'}}>
+    <div className="home-container1">
+      {/* Content for your Home page */}
       <h1>Welcome to the Video Conference</h1>
-      <div className="input-container">
-        <label htmlFor="roomCode">Enter Room Code:</label>
+      <div className="input-container1">
+        <label htmlFor="roomCode">Enter Code to start video call:</label>
         <input
           type="text"
           id="roomCode"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Enter code"
+          required
         />
-        <button onClick={handleJoinRoom} className='bg-danger'>Join</button>
+        <button onClick={handleJoinRoom} className='bg-danger mt-3'>Join Room</button>
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validations/AxiosInstance'
+
 import dummy from '../images/images/addem.png';
 import leaves from '../images/images/em2.png';
 import total from '../images/total.jpg';
@@ -19,7 +21,7 @@ const Home = () => {
 
   const totalEmployee = async () => {
     try {
-      const result = await axios.get('http://localhost:6700/user/getuser/total');
+      const result = await axios.get('/user/getuser/total');
      
       setData(result.data);
     } catch (err) {
