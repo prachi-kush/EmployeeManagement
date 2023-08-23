@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 import './divColor.css';
 import { toast } from 'react-toastify';
 import axiosInstance from '../validation/AxiosInstance'; // Import your Axios instance
-
-import contact2 from '../images/contact2.png'
 import contact5 from '../images/contact5.avif'
-import contact3 from '../images/contact3.jpeg'
-import axios from 'axios';
+
 
 const Contact = () => {
  const [formData, setFormData] = useState({});
@@ -75,12 +73,18 @@ const resetForm = () => {
        <div>
     
       <div className='form mt-5'>
-        <div className='divColor justify-content-between d-flex flex-row'>
+
+       
+        <div className='bg-light p-3 justify-content-between d-flex flex-row'>
           <h4>How can we help you?</h4>
+
+          <div style={{width:'15%',alignSelf:'center'}} >
+          <Link to='/videoHome'><h3 className='bg-primary text-white btn '>Join Meeting Room</h3></Link>
+
+        </div>
           <button className='btn btn-warning mx-5 '
           onClick={handleOpenModal}
-          >
-            <h4 >Click here</h4>
+          ><h4 >Click here</h4>
           </button>
         </div>
         <div className='m-5'>

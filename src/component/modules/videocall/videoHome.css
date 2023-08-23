@@ -1,0 +1,19 @@
+/* Home.css */
+.home-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed to fill the viewport */
+    background-color: #f0f0f0; /* Set your desired background color */
+  }
+  
+  .input-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Add more styles as needed */
+  

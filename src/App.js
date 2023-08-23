@@ -16,6 +16,8 @@ import Contact from './component/modules/Contact';
  import About from './component/About';
  import Department from './component/modules/Department'
  import UpcomingBirthday from './component/modules/UpcomingBirthday';
+ import VideoHome from '../src/component/modules/videocall/VideoHome';
+ import VideoRoom from '../src/component/modules/videocall/VideoRoom';
 
  import PrivateComponent from './component/validation/PrivateComponent'
 
@@ -43,7 +45,8 @@ function App() {
        <Route  path='/about' element={<About/>}></Route>
        <Route  path='/department' element={<Department/>}></Route>
        <Route  path='/birthday' element={<UpcomingBirthday/>}></Route>
-
+       <Route path='/videoHome' element={<VideoHome/>}/>
+           <Route path='/videoRoom/:roomId' element={<VideoRoom/>}/>
        </Route>
        <Route path='/' element={<Home/>}></Route>
 
