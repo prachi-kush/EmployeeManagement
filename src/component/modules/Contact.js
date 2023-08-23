@@ -41,7 +41,7 @@ const resetForm = () => {
     console.log("handleSubmit")
     event.preventDefault();
     try {
-      const response = await axiosInstance.post("http://localhost:6700/user/feedback", formData);
+      const response = await axiosInstance.post("/user/feedback", formData);
       console.log("api response", response.data); // Use response.data to access the response payload
       handleCloseModal()
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validation/AxiosInstance'
 import { Link, useNavigate } from 'react-router-dom';
 import './SignupForm.css';
 
@@ -35,7 +36,7 @@ const Signup = () => {
       alert('Please Enter Valid Details');
     } else {
       try {
-        let result = await axios.post('http://localhost:6700/user/signup', data);
+        let result = await axios.post('/user/signup', data);
         // console.log("result----------->>>",result)
         // localStorage.setItem('user', JSON.stringify(result.data));
         // console.log("is approved result data",result.data.isApproved)

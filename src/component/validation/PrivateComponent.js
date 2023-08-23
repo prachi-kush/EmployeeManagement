@@ -2,7 +2,9 @@
 import React, { useEffect } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validation/AxiosInstance'
+
 
 const PrivateComponent = () => {
   const auth = JSON.parse(localStorage.getItem('user'));
@@ -20,7 +22,7 @@ const PrivateComponent = () => {
   const refreshAccessToken = async (refreshToken) => {
     console.log('refreshToken: -------------------', refreshToken);
     try {
-      const response = await axios.post('http://localhost:6700/user/refresh', { refreshToken });
+      const response = await axios.post('/user/refresh', { refreshToken });
       const newAccessToken = response.data.accessToken;
       auth.token = newAccessToken;
       localStorage.setItem('admin', JSON.stringify(auth));

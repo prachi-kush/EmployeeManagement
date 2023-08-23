@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
+import axios from '../validation/AxiosInstance'
 import './LoginForm.css';
 
 const Login = () => {
@@ -29,7 +30,7 @@ const Login = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        let result = await axios.post('http://localhost:6700/user/login', data);
+        let result = await axios.post('/user/login', data);
         console.log('result====================>>>>>', result.data.user);
         console.log('result: ', result);
         localStorage.setItem('user', JSON.stringify(result.data.user));

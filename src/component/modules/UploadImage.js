@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import dummyUser from '../images/dummyUser.png';
-import axios from 'axios';
+import axios from '../validation/AxiosInstance'
 
 const UploadImage = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ const UploadImage = () => {
     const email=currentUser.email;
     console.log("emaillllllllll",email)
     try {
-      const response = await axios.get(`http://localhost:6700/user/getuser/${email}`);
+      const response = await axios.get(`/user/getuser/${email}`);
       setFormData(response.data[0]);
       console.log('formData', formData);
     } catch (err) {
@@ -41,7 +41,7 @@ const UploadImage = () => {
     const imageFormData = new FormData();
     imageFormData.append('image', file);
     try {
-      const response = await axios.post(`http://localhost:6700/uploadsImage/${email}`, imageFormData);
+      const response = await axios.post(`/uploadsImage/${email}`, imageFormData);
       console.log('Image uploaded successfully', response.data);
   
       // Update the form data with the new image URL received from the backend

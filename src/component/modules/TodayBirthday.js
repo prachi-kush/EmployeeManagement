@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../validation/AxiosInstance'
 import React, { useEffect, useState } from 'react';
 import './TodayBirthday.css'; // Import the CSS file for styling
 import dummy from '../images/dummyUser.png'
@@ -12,7 +12,7 @@ const TodayBirthday = () => {
 
   const fetchTodayBirthdays = async () => {
     try {
-      const response = await axios.get('http://localhost:6700/user/birthday'); // Replace with your API endpoint URL
+      const response = await axios.get('/user/birthday'); // Replace with your API endpoint URL
       console.log(response.data, 'dataaaaaa');
       setUsers(response.data.todayBirthdays);
     } catch (error) {

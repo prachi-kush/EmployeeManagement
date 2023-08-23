@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../validation/AxiosInstance';
 import { useNavigate } from 'react-router-dom';
 import ap2 from '../images/ap2.avif';
 
@@ -15,11 +15,12 @@ const Approval = () => {
 
   const gateData = async () => {
     const currentUser = JSON.parse(localStorage.getItem('user'));
-    console.log('currentUser: ', currentUser);
-    const email = currentUser[0].email;
-    console.log('currentUser.email: ', currentUser[0].email);
+    console.log('currentUser:00000000000000000000000 ', currentUser.email);
+    const email = currentUser.email;
+    // const email = currentUser[0].email;
+    console.log('===================.email: ',email);
     try {
-      const result = await axios.get(`http://localhost:6700/user/searchuser/${email}`)
+      const result = await axios.get(`/user/searchuser/${email}`)
       // .then(res=>{
       //   console.log(res.data,"data")
       // });

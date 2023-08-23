@@ -1,9 +1,6 @@
 import './UpcomingBirthday.css';
-
-
-
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../validation/AxiosInstance'
 import dummy from '../images/dummyUser.png';
 
 const UpcomingBirthday = () => {
@@ -15,7 +12,7 @@ const UpcomingBirthday = () => {
 
   const fetchUpcomingBirthdays = async () => {
     try {
-      const response = await axios.get('http://localhost:6700/user/birthday'); // Replace with your API endpoint URL
+      const response = await axios.get('/user/birthday'); // Replace with your API endpoint URL
       setUsers(response.data.upcomingBdays);
     } catch (error) {
       console.error('Error:', error);

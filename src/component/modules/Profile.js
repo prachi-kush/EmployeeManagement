@@ -40,7 +40,7 @@ const Profile = () => {
     const currentUser = JSON.parse(localStorage.getItem("user"));
     const email = currentUser.email;
     try {
-      const response = await axiosInstance.get(`http://localhost:6700/user/getuser/${email}`);
+      const response = await axiosInstance.get(`/user/getuser/${email}`);
       setFormData(response.data[0]);
       console.log("formData===============", formData)
     } catch (err) {
