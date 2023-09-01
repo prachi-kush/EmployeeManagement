@@ -45,7 +45,7 @@ const UploadImage = () => {
         const formData = new FormData();
         formData.append('image', file);
         try {
-            const response = await axios.post(`http://localhost:6700/uploadsImage/${email}`, formData);
+            const response = await axios.post(`/uploadsImage/${email}`, formData);
             console.log('Image uploaded successfully',response.data);
             // Update the form data with the new image URL
             setFormData({ ...formData, imageUrl: response.data.imageUrl });

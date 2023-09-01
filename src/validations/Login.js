@@ -1,20 +1,77 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
+import { useDispatch,useSelector } from 'react-redux';
 import axios from '../validations/AxiosInstance'
 import './LoginForm.css';
 import { toast } from 'react-toastify';
+// import { loginAsync } from '../store/thunks/authAsync';
+// import { setUser, setError } from '../store/reducers/authSlice'; 
 
 
 const Login = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({});
+//redux implemantation==============
+ const dispatch =useDispatch();
+  const auth =useSelector((state)=>state.auth)
+  console.log('auth:777777777777777 ', auth);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
      setData((prevData) => ({ ...prevData, [name]: value }));
    };
+
+  //  const handleSubmit = (e) => {
+  //   e.preventDefault(); // Prevent the default form submission behavior
+  //   const validationErrors = {};
+  
+  //   if (!data.email) {
+  //     validationErrors.email = 'Email is required';
+  //   }
+  //   if (!data.password) {
+  //     validationErrors.password = 'Password is required';
+  //   }
+  
+  //   if (Object.keys(validationErrors).length === 0) {
+  //     dispatch(loginAsync(data))
+     
+      
+  //       .then((response) => {
+  //         console.log('response: back ', response);
+  //         dispatch(setUser(response));
+  //         console.log('response: ', response.type);
+  //       alert("response")
+       
+  //         toast.success('Logged in successfully!', {
+  //           position: 'top-right',
+  //           autoClose: 5000,
+  //           hideProgressBar: false,
+  //           closeOnClick: true,
+  //           pauseOnHover: true,
+  //           draggable: true,
+  //           progress: undefined,
+  //         });
+  //         navigate('/admin/home');
+  //       })
+  //       .catch((error) => {
+  //         dispatch(setError(error.message))
+  //         console.log('error.message: ', error.message);
+  //         alert("failure=============>",error.message)
+  //         toast.error(error.message || 'An error occurred', {
+  //           position: 'top-right',
+  //           autoClose: 5000,
+  //           hideProgressBar: false,
+  //           closeOnClick: true,
+  //           pauseOnHover: true,
+  //           draggable: true,
+  //           progress: undefined,
+  //         });
+  //       });
+  //   }
+  // };
+  
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();

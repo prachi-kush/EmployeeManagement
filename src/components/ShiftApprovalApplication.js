@@ -7,14 +7,6 @@ const ShiftApprovalApplication = () => {
   const [data, setData] = useState({});
   const [userData, setUserData] = useState({});
   const [shiftData, setshiftData] = useState({});
- 
-  // const token =JSON.parse(localStorage.getItem('token'));
-  // const refreshToken=JSON.parse(localStorage.getItem('refreshToken'))
-
-  // const headers={
-  //   Authorization:`Bearer ${token}`,
-  //   RefreshToken: refreshToken,
-  // };
 
   useEffect(() => {
     getData();

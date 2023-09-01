@@ -100,15 +100,10 @@ const AddEmployee = () => {
         <>
             <div className='d-flex flex-row container row m-3'>
                 <div className="col-6">
-  
-
-                </div>
-              
-
-                <div className="col-6">
+    </div>
+           <div className="col-6">
                     <form
-                        
-                        className="registration-form">
+                       className="registration-form">
                         <h1>Add Employee</h1>
                         <hr />
                         <label>Name:</label>
@@ -174,7 +169,7 @@ const AddEmployee = () => {
                             onChange={handleInputChange}
                         />
                         <label>Highest Education </label>
-                        <select name="education" value={formData.education} onChange={handleInputChange}>
+                        <select name="education" value={formData.education} onChange={handleInputChange} required>
                             <option value="BCA">BCA</option>
                             <option value="BBA">BBA</option>
                             <option value="B.Tech">B.Tech</option>
@@ -183,7 +178,7 @@ const AddEmployee = () => {
                             <option value="M.Tech">M.Tech</option>
                         </select>
                         <label>Department</label>
-                        <select name="department" value={formData.department} onChange={handleInputChange}>
+                        <select name="department" value={formData.department} onChange={handleInputChange} required>
                         <option value="">Select</option>
                             <option value="HR Department">HR Department</option>
                             <option value="Cloud Computing">Cloud Computing</option>
@@ -248,8 +243,13 @@ const AddEmployee = () => {
                             value={formData.joiningDate}
                             onChange={handleInputChange}
                         />
-                   
-                        <label
+                          <label>Select Shift </label>
+                        <select name="shiftType" value={formData.shiftType} onChange={handleInputChange} required>
+                             <option value="morning">Morning</option>
+                            <option value="evening">Evening</option>
+                            <option value="night">Night</option>
+                        </select>
+                     <label
                         className='skillsText'
                         >Enter skills :</label>
                         <textarea

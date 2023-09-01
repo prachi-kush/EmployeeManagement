@@ -1,9 +1,8 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  // baseURL: 'http://localhost:6700', // Your API base URL
-  baseURL:'https://emp3-3e2i.onrender.com'
-
+   baseURL: 'http://localhost:6700', // Your API base URL
+  // baseURL:'https://emp3-3e2i.onrender.com'
 });
 
 instance.interceptors.request.use(
@@ -39,7 +38,7 @@ instance.interceptors.response.use(
           });
 
           localStorage.setItem('token', JSON.stringify(response.data.token));
-          localStorage.setItem('refreshToken', JSON.stringify(response.data.refreshToken)); // Update the refresh token
+          localStorage.setItem('refreshToken', JSON.stringify(response.data.refreshToken)); 
 
           // Retry the original request with the new access token
           const originalRequest = error.config;
