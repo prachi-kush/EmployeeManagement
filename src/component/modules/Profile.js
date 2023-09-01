@@ -110,11 +110,7 @@ const Profile = () => {
   };
 
   const updateProfile = async (event, email) => {
-    event.preventDefault();
-    const token = JSON.parse(localStorage.getItem('token'));
-    // const headers = {
-    //   Authorization: `Bearer ${token}`, // Set the Authorization header with the token
-    // };
+    event.preventDefault();  
     try {
       const response = await axiosInstance.put(`/user/updateprofile/${formData.email}`, { ...formData, });
       console.log('Profile updated successfully!', response.data);

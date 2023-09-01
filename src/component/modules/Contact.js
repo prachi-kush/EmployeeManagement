@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 import './divColor.css';
 import { toast } from 'react-toastify';
-import axiosInstance from '../validation/AxiosInstance'; // Import your Axios instance
+import axiosInstance from '../validation/AxiosInstance';
 import contact5 from '../images/contact5.avif'
 
 
